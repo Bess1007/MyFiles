@@ -1,0 +1,119 @@
+ <span class="fa fa-angle-down openSon_btn"
+                                                  v-if="item.childList.length>0"></span><!--展开下一级按钮-->
+                                            <ul class="labelSonbox labelBox_sonLevel_1">
+                                                <li class="rightLabel labelCell_sonLevel_1"
+                                                    :class="{'haveSonLabel':item2.childList.length>0}"
+                                                    v-for="(item2,index) in item.childList">
+                                                    <a class="label_txt" :title="item2.name" :id="item2.id"
+                                                       @click="addselectedLable(item2)"
+                                                       :class="{ 'actived': selectedLableId.indexOf(item2.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item2.id) >= 0 }">{{item2.name}}</a>
+                                                    <!--二级标签-->
+                                                    <span class="fa fa-angle-down openSon_btn"
+                                                          v-if="item2.childList.length>0"></span><!--展开下一级按钮-->
+                                                    <ul class="labelSonbox labelBox_sonLevel_2 clearfix">
+                                                        <li class="rightLabel"
+                                                            :class="{'haveSonLabel':item3.childList.length>0}"
+                                                            v-for="(item3,index) in item2.childList">
+                                                            <a class="label_txt" :title="item3.name" :id="item3.id"
+                                                               @click="addselectedLable(item3)"
+                                                               :class="{ 'actived': selectedLableId.indexOf(item3.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item3.id) >= 0 }">{{item3.name}}</a>
+                                                            <!--三级标签-->
+                                                            <span class="fa fa-angle-down openSon_btn"
+                                                                  v-if="item3.childList.length>0"></span><!--展开下一级按钮-->
+                                                            <ul class="labelSonbox labelBox_sonLevel_3 clearfix">
+                                                                <li class="rightLabel"
+                                                                    v-for="(item4,index) in item3.childList">
+                                                                    <a class="label_txt" :title="item4.name"
+                                                                       :id="item4.id" @click="addselectedLable(item4)"
+                                                                       :class="{ 'actived': selectedLableId.indexOf(item4.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item4.id) >= 0 }">{{item4.name}}</a>
+                                                                    <!--四级标签-->
+                                                                    <span class="fa fa-angle-down openSon_btn"
+                                                                          v-if="item4.childList.length>0"></span>
+                                                                    <!--展开下一级按钮-->
+                                                                    <ul class="labelSonbox labelBox_sonLevel_4 clearfix">
+                                                                        <li class="rightLabel"
+                                                                            v-for="(item5,index) in item4.childList">
+                                                                            <a class="label_txt" :title="item5.name"
+                                                                               :id="item5.id"
+                                                                               @click="addselectedLable(item5)"
+                                                                               :class="{ 'actived': selectedLableId.indexOf(item5.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item5.id) >= 0 }">{{item5.name}}</a>
+                                                                            <!--五级标签-->
+                                                                            <span class="fa fa-angle-down openSon_btn"
+                                                                                  v-if="item5.childList.length>0"></span>
+                                                                            <!--展开下一级按钮-->
+                                                                            <ul class="labelSonbox labelBox_sonLevel_5 clearfix">
+                                                                                <li class="rightLabel"
+                                                                                    v-for="(item6,index) in item5.childList">
+                                                                                    <a class="label_txt"
+                                                                                       :title="item6.name"
+                                                                                       :id="item6.id"
+                                                                                       @click="addselectedLable(item6)"
+                                                                                       :class="{ 'actived': selectedLableId.indexOf(item6.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item6.id) >= 0 }">{{item6.name}}</a>
+                                                                                    <!--⑥级标签-->
+                                                                                    <span class="fa fa-angle-down openSon_btn"
+                                                                                          v-if="item6.childList.length>0"></span>
+                                                                                    <!--展开下一级按钮-->
+                                                                                    <ul class="labelSonbox labelBox_sonLevel_6 clearfix">
+                                                                                        <li class="rightLabel"
+                                                                                            v-for="(item7,index) in item6.childList">
+                                                                                            <a class="label_txt"
+                                                                                               :title="item7.name"
+                                                                                               :id="item7.id"
+                                                                                               @click="addselectedLable(item7)"
+                                                                                               :class="{ 'actived': selectedLableId.indexOf(item7.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item7.id) >= 0 }">{{item7.name}}</a>
+                                                                                            <!--七级标签-->
+                                                                                            <span class="fa fa-angle-down openSon_btn"
+                                                                                                  v-if="item7.childList.length>0"></span>
+                                                                                            <!--展开下一级按钮-->
+                                                                                            <ul class="labelSonbox labelBox_sonLevel_7 clearfix">
+                                                                                                <li class="rightLabel"
+                                                                                                    v-for="(item8,index) in item7.childList">
+                                                                                                    <a class="label_txt"
+                                                                                                       :title="item8.name"
+                                                                                                       :id="item8.id"
+                                                                                                       @click="addselectedLable(item8)"
+                                                                                                       :class="{ 'actived': selectedLableId.indexOf(item8.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item8.id) >= 0 }">{{item8.name}}</a>
+                                                                                                    <!--八级标签-->
+                                                                                                    <span class="fa fa-angle-down openSon_btn"
+                                                                                                          v-if="item8.childList.length>0"></span>
+                                                                                                    <!--展开下一级按钮-->
+                                                                                                    <ul class="labelSonbox labelBox_sonLevel_8 clearfix">
+                                                                                                        <li class="rightLabel"
+                                                                                                            v-for="(item9,index) in item8.childList">
+                                                                                                            <a class="label_txt"
+                                                                                                               :title="item9.name"
+                                                                                                               :id="item9.id"
+                                                                                                               @click="addselectedLable(item9)"
+                                                                                                               :class="{ 'actived': selectedLableId.indexOf(item9.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item9.id) >= 0 }">{{item9.name}}</a>
+                                                                                                            <!--九级标签-->
+                                                                                                            <span class="fa fa-angle-down openSon_btn"
+                                                                                                                  v-if="item9.childList.length>0"></span>
+                                                                                                            <!--展开下一级按钮-->
+                                                                                                            <ul class="labelSonbox labelBox_sonLevel_9 clearfix">
+                                                                                                                <li class="rightLabel"
+                                                                                                                    v-for="(item0,index) in item9.childList">
+                                                                                                                    <a class="label_txt"
+                                                                                                                       :title="item0.name"
+                                                                                                                       :id="item9.id"
+                                                                                                                       @click="addselectedLable(item0)"
+                                                                                                                       :class="{ 'actived': selectedLableId.indexOf(item0.id+'selected') >= 0,'notOpt': disallowSelect.indexOf(item0.id) >= 0 }">{{item0.name}}</a>
+                                                                                                                    <!--九级标签-->
+
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
